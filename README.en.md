@@ -23,12 +23,13 @@ Moving files requires your click.
 
 ## Install (30 seconds)
 
-**In dsh web**: open **Plugins → Add plugin**, enter `github:vlln/dsh-pancha`, install.
+**In dsh web**: open **Plugins → Add plugin**, enter `dsh-pancha`, install.
 
 **CLI**:
 
 ```sh
-dsh plugin --profile web add github:vlln/dsh-pancha
+dsh plugin --profile web add dsh-pancha
+# to track the latest commit instead: dsh plugin --profile web add github:vlln/dsh-pancha
 ```
 
 - Takes effect after a page refresh; no host restart.

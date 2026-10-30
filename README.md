@@ -21,12 +21,13 @@ Finder 和 SpaceSniffer 只回答「哪个文件夹大」，不回答「它是�
 
 ## 30 秒安装
 
-**在 dsh web 里**：打开 **Plugins → 添加插件**，输入 `github:vlln/dsh-pancha`，点安装。
+**在 dsh web 里**：打开 **Plugins → 添加插件**，输入 `dsh-pancha`，点安装。
 
 **用 CLI**：
 
 ```sh
-dsh plugin --profile web add github:vlln/dsh-pancha
+dsh plugin --profile web add dsh-pancha
+# 想跟最新提交而不是发布版：dsh plugin --profile web add github:vlln/dsh-pancha
 ```
 
 - **生效**：装完刷新页面，无需重启宿主。

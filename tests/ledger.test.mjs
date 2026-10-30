@@ -12,7 +12,9 @@ async function withDir(run) {
   try {
     await run(dir)
   } finally {
-    await rm(dir, { recursive: true, force: true })
+    // 账本是防抖写的：测试结束时可能还有一次写落在目录里，rm 正好走到 rmdir
+    // 就会 ENOTEMPTY（实测约 1/10 概率）。重试几次，别让 flaky 污染发布门禁。
+    await rm(dir, { recursive: true, force: true, maxRetries: 10, retryDelay: 20 })
   }
 }
 
